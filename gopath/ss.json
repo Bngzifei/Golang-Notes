@@ -1,0 +1,17 @@
+{
+    "version_name": "",
+    "project_id": "",
+    "cases": [{
+        "status": "failed",
+        "description": "VmdiskManager.vda_delete_snapshot",
+        "author": "\u80e1\u52c7\u5f3a52284",
+        "setup": "",
+        "test_method": "\u6a21\u5757\u6d4b\u8bd5",
+        "priority": "BVT",
+        "step": "\u5220\u9664\u865a\u62df\u78c1\u76d8\u5feb\u7167",
+        "automated": true,
+        "case_code": "4c463a6e-0b11-463e-bd48-b52b4ba2582c",
+        "automated_proposed": true,
+        "name": "\u5220\u9664\u865a\u62df\u78c1\u76d8\u5feb\u7167"
+    }]
+}

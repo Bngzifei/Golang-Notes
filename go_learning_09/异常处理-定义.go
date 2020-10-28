@@ -50,7 +50,9 @@ func test() {
 /*
 panic error!
 
-由于 panic,recover 参数类型为interface{},因此 可抛出任何类型对象
+由于 panic,recover 参数类型为interface{},因此 可抛出任何类型对象.
 
+func panic(v interface{})
+func recover() interface{}
 
- */
+*/

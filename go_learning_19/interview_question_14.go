@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //func main() {
 //	str := "hello"
 //	// cannot assign to str[0]
@@ -8,4 +10,13 @@ package main
 //	fmt.Println(str)
 //}
 
-func incr(p *int)
+func incr(p *int) int {
+	*p++
+	return *p
+}
+
+func main() {
+	p := 1
+	incr(&p)
+	fmt.Println(p)
+}

@@ -22,15 +22,50 @@ import "fmt"
 
 */
 
-func main() {
-	// 在这里只声明了map m,并没有分配内存空间,不能直接赋值,需要
-	// 使用make(),都提倡使用make() 或者字面量的方式直接初始化map
-	// B处,v,k := m["b"] ,当key为b的元素不存在的时候,v会返回
-	// 值类型对应的零值,k返回false.
-	m := make(map[string]int)
-	m["a"] = 1
-	if v, ok := m["b"]; ok { // B
-		fmt.Println(v)
-	}
+//func main() {
+//	// 在这里只声明了map m,并没有分配内存空间,不能直接赋值,需要
+//	// 使用make(),都提倡使用make() 或者字面量的方式直接初始化map
+//	// B处,v,k := m["b"] ,当key为b的元素不存在的时候,v会返回
+//	// 值类型对应的零值,k返回false.
+//	m := make(map[string]int)
+//	m["a"] = 1
+//	if v, ok := m["b"]; ok { // B
+//		fmt.Println(v)
+//	}
+//}
+
+type A interface {
+	ShowA() int
 }
-【】
+
+type B interface {
+	ShowB() int
+}
+
+type Work struct {
+	i int
+}
+
+func (w Work) ShowA() int {
+	return w.i + 10
+}
+
+func (w Work) ShowB() int {
+	return w.i + 20
+}
+
+
+func main() {
+	c := Work{3}
+	var a A = c
+	var b B = c
+	fmt.Println(a.ShowB())
+	fmt.Println(b.ShowA())
+}
+
+/*
+接口的静态类型.
+a b具有相同的动态类型和动态值,分别是结构体 work和{3};
+a 的静态类型是A,b的静态类型是B.接口A不包括方法ShowB(),
+接口B也包括方法ShowA(),编译报错.
+ */

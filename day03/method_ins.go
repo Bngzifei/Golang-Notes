@@ -23,11 +23,14 @@ func (iPhone IPhone) call() {
 }
 
 func main() {
-	var phone Phone
-
-	phone = new(NokiaPhone)
+	//var phone Phone
+	//
+	//phone = new(NokiaPhone)
+	phone := NokiaPhone{}
 	phone.call()
 
-	phone = new(IPhone)
-	phone.call()
+	//phone = new(IPhone)
+	//phone.call()
+	phone1 := IPhone{}
+	phone1.call()
 }

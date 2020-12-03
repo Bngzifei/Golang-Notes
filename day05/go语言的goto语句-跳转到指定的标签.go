@@ -58,7 +58,7 @@ breakHere:
 // 使用goto语句后,无须额外的变量就可以快速退出所有的循环.
 
 // 统一错误处理
-// 多处错误处理存在代码重复时时非常棘手的,例如:
+// 多处错误处理存在代码重复时非常棘手的,例如:
 err := firstCheckError()
 if err != nil {
     fmt.Println(err)

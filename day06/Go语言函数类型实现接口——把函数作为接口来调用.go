@@ -151,7 +151,7 @@ func (f HandlerFunc) ServeHTTP(w ResponseWriter,r *Request){
 
 // 要使用闭包实现默认的HTTP请求处理,可以使用http.HandleFunc()函数,函数定义如下:
 func HandleFunc(pattern string,handler func(ResponseWriter,*Request)) {
-    DefaultServeMux.HandleFunc(pattren,handler)
+    DefaultServeMux.HandleFunc(pattren, handler)
 }
 
 // 而DefaultServeMux是ServeMux结构,拥有HandleFunc()方法,定义如下:
